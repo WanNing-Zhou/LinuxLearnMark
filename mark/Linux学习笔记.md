@@ -15,14 +15,18 @@ GPL 表示当前源码是公开的
 保障了用户的自由
 
 BSD 保障了软件开发者/公司的自由
+
 ![img_2.png](img_2.png)
 
 ### 1-3 Linux发行版
+
 ![img_3.png](img_3.png)
 
 ### 1-4 Linux VS Windows
+
 ![img_4.png](img_4.png)
 
 ### 下载安装 
 
 [清华大学源](https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/)
+
