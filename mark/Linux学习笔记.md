@@ -23,4 +23,6 @@ BSD 保障了软件开发者/公司的自由
 ### 1-4 Linux VS Windows
 ![img_4.png](img_4.png)
 
+### 下载安装 
 
+[清华大学源](https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/)
