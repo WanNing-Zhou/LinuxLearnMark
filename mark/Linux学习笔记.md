@@ -17,4 +17,9 @@ GPL 表示当前源码是公开的
 BSD 保障了软件开发者/公司的自由
 ![img_2.png](img_2.png)
 
+### 1-3 Linux发行版
+
+![img.png](img.png)
+
+
 
