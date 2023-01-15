@@ -18,8 +18,9 @@ BSD 保障了软件开发者/公司的自由
 ![img_2.png](img_2.png)
 
 ### 1-3 Linux发行版
+![img_3.png](img_3.png)
 
-![img.png](img.png)
-
+### 1-4 Linux VS Windows
+![img_4.png](img_4.png)
 
 
