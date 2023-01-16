@@ -259,8 +259,18 @@ service 服务名 start|stop|restart|status
 2) 经验技巧
 
 查看服务的方法: /etc/init.d/服务名,发现只有两个服务保留在service
+![img_9.png](img_9.png)
 
 
+## 7-4 systemctl (CentOs7版本-重点掌握)
+
+1) 基本语法
+
+systemctl start|stop|restart|status 服务名
+
+2) 经验技巧
+
+查看服务的方法 /user/lib/systemd/
 
 
 
