@@ -252,6 +252,15 @@ hostnamectl set-hostname spark10
 
 ### 7-2 service 服务管理(CentOS6版本-了解)
 
+1) 基本语法
+
+service 服务名 start|stop|restart|status
+
+2) 经验技巧
+
+查看服务的方法: /etc/init.d/服务名,发现只有两个服务保留在service
+
+
 
 
 
