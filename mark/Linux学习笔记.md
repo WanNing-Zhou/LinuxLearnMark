@@ -236,6 +236,21 @@ vim /etc/ sysconfig/ network- scripts/ ifcfg- ens33
 
 ### 5-3 配置主机名
 
+hostnamectl set-hostname spark10
+
+## 六 远程登录
+
+通常在工作过程中,公司中使用的真实服务器或者是云服务器,都不允许除运维人员之外的人员直接接触,因此就需要通过远程的登录的方式来操作,所以
+远程工具就是必不可缺的,目前比较主流的有Xshell,SSH Secure Shell,SecureCRT, FinalShell等,根据自己的习惯自行选择
+
+## 七 系统管理
+
+### 7-1 Linux 中的进程和服务
+
+计算机中,一个正在执行的程序或命令,被叫做"进程"(process)
+启动之后一直存在,常驻内存的进程,一般被称作"服务"(service)
+
+### 7-2 service 服务管理(CentOS6版本-了解)
 
 
 
