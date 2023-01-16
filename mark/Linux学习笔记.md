@@ -216,7 +216,25 @@ VMware提供了三种网络连接模式
 - NAT模式: 虚拟机和注解构建一个专用网络,并通过虚拟网络地址转换(NAT)设备对IP进行转换,虚拟机通过共享主机IP可以访问外部网络,但外部网络无法访问虚拟机
 - 仅主机模式: 虚拟机只于主机共享一个专用网络,于外部网络无法通信
 
+### 5-2 配置网络 
 
+vim /etc/ sysconfig/ network- scripts/ ifcfg- ens33
+
+![img_8.png](img_8.png)
+
+重启服务 service network restart
+
+#### 5-2-1修改IP后可能会遇到的问题
+
+1) 物理机能ping通虚拟机,但是虚拟机ping不通物理机,一般都是因为物理机的防火墙问题,把防火墙关闭就行
+2) 虚拟机能ping通物理机,但是虚拟机ping不通外网,一般都是因为DNS的设置有问题
+3) 虚拟机Ping www.baidu.com显示域名未知等信息,一般查看GATEwAY和DNS设置是否正确
+4) 如果以上全部设置还是不行,需要关闭NetworkManager服务
+- systemctl stop NetworkManager 关闭
+- systemctl disable NetworkManager 禁用
+5) 如果检查发现 systemctl status network 有问题 需要检查ifcfg-ens33
+
+### 5-3 配置主机名
 
 
 
