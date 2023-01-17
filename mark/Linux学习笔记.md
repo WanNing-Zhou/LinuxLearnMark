@@ -277,24 +277,87 @@ systemctl start|stop|restart|status 服务名
 1) Linux运行级别[CentOS 6], 如图所示
 ![img_10.png](img_10.png)
 
-Linux系统内核加载后,会启动init进程,根据进程级别,运行对应的服务
+- Linux系统内核加载后,会启动init进程,根据进程级别,运行对应的服务
 
 2) ContOS7的运行级别简化为:
 
-  multi-user.target 等价于原运行基表3(多用户有网,无图形界面)
-  graphical.target 等价于原运行级别5(多用户有网,有图形界面)
+  - multi-user.target 等价于原运行基表3(多用户有网,无图形界面)
+  - graphical.target 等价于原运行级别5(多用户有网,有图形界面)
 
-3)查看当前运行级别
+3) 查看当前运行级别
   
-  systemctl get-default
+  - systemctl get-default
 
-4)修改当前运行级别
+4) 修改当前运行级别
 
-  systemctl set-default TARGET.target(这里TARGET取multi-user或者graphical)
-
-## 关闭防火墙
+  - systemctl set-default TARGET.target(这里TARGET取multi-user或者graphical)
 
 
+
+### 7-5 关闭防火墙
+
+1) 查看防火墙状态
+- systemctl status firewalld
+2) 关闭防火墙
+- systemctl stop firewalld.service
+3) 关闭防火墙开机自启动
+- systemctl disable firewalld.service
+4) 开启防火墙开机自启动
+- systemctl enable firewalld.service
+5) 开启防火墙
+-  systemctl start firewalld.service
+
+### 7.6 关机重启命令
+
+在linux领域大多用在服务器上,很少遇到关机的操作,毕竟服务器上跑一个服务是永无止境的,除非特殊情况下,不得已才会关机
+
+1) 基本语法
+   1) sync  将数据用内存同步到硬盘中
+   2) halt  停机关闭系统,但不断电
+   3) poweroff 关机,断电
+   4) reboot 就是重启,等同于shutdown -r now
+   5) shutdown[选择] 时间
+      - -H 与--halt 关机
+      - -r -r=reboot重启
+      - now 立刻关机
+      - 时间 等待多久后关机(时间单位是分钟)
+      - 具体时间 定时关机
+2) 经验技巧
+
+Linux系统中为了提高磁盘的读写效率,对磁盘采取了"预读迟写"操作方式,当用户保存文件时,Linux核心并不一定立即将保存数据写入物理磁盘中,
+而是将数据保存在缓冲区中,等待缓冲器满时再写入磁盘,这种方式可以极大的提高磁盘写入数据的效率,但是也带来了安全隐患,如果数据还未写入磁盘时
+系统断点或者其他严重问题出现,将导致数据丢失 使用sync指令可以立即将缓冲器的数据写入磁盘
+
+3) 案例
+   1) 将数据由内存同步到硬盘中
+   
+          sync
+
+   2) 重启
+      
+          reboot
+   
+   3) 停机(不断电)
+   
+          halt
+   
+   4) 计算机将在1分钟后关机,并且会显示在登录用户的当前屏幕中
+
+          shutdown -h 1
+   
+   5) 立刻关机(等同于 poweroff)
+   
+          shutdown -h now
+   
+   6) 系统李马重启(等同于reboot)
+   
+          shutdown -r now
+   
+## 七 常用基本命令(重要)
+
+### 7-1 帮助命令
+
+    
 
 
 
