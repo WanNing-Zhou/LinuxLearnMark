@@ -262,7 +262,7 @@ service 服务名 start|stop|restart|status
 ![img_9.png](img_9.png)
 
 
-## 7-4 systemctl (CentOs7版本-重点掌握)
+### 7-3 systemctl (CentOs7版本-重点掌握)
 
 1) 基本语法
 
@@ -271,6 +271,28 @@ systemctl start|stop|restart|status 服务名
 2) 经验技巧
 
 查看服务的方法 /user/lib/systemd/
+
+### 7-4 系统运行级别
+
+1) Linux运行级别[CentOS 6], 如图所示
+![img_10.png](img_10.png)
+
+Linux系统内核加载后,会启动init进程,根据进程级别,运行对应的服务
+
+2) ContOS7的运行级别简化为:
+
+  multi-user.target 等价于原运行基表3(多用户有网,无图形界面)
+  graphical.target 等价于原运行级别5(多用户有网,有图形界面)
+
+3)查看当前运行级别
+  
+  systemctl get-default
+
+4)修改当前运行级别
+
+  systemctl set-default TARGET.target(这里TARGET取multi-user或者graphical)
+
+## 关闭防火墙
 
 
 
