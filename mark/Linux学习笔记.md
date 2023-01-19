@@ -447,6 +447,16 @@ mkdir: Remove directory 移除目录
 
 3) 参数说明
 
+- source
+  - 源文件
+- dest
+  - 目标文件
+
+4) 经验技巧
+   
+强制覆盖不提示的方法: /cp
+
+
 
     
 
