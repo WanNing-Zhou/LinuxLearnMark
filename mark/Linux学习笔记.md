@@ -476,7 +476,7 @@ rm[选项] delete File 递归删除目录中所有内容
 
 1) 基本语法
    1) mv oldNameFile newNameFile 重命名
-   2) mv /temp/movefile/targetFolder 移动文件
+   2) mv temp /movefile/targetFolder 移动文件
 
 #### 7-2-9 查看文件内容
 
