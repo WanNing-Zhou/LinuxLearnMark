@@ -719,7 +719,34 @@ cat /etc passwd
 
     - who am i 查看的是当前是在哪个用户进行下进行的操作
     - whoami 是查看当前是在哪个用户身份下进行的操作 
-    - 
+
+#### 7-4-7 sudo 设置普通用户具有root权限
+
+1) 添加zhouzhou用户并对其设置密码
+
+- useradd zhouzhou
+- passwd zhouzhou
+
+2) 修改配置文件
+   
+- vi /etc/sudoers
+
+修改/etc/sudoers文件,找到下面一行(91),在root下面添加一行,如下所示
+
+        ## Allow root to run any commands anywhere
+        root ALL=(ALL) ALL
+        zhouzhou ALL=(ALL) ALL
+
+或者配置成采用sudo命令时,不需要输入密码
+
+        ## Allow root to run any commands anywhere
+        root ALL=(ALL) ALL
+        zhouzhou ALL=(ALL) NOPASSWD:ALL
+
+修改完毕后,可以用zhouzhou账号登录,然后用命令sudo,即可获得root权限进行操作
+
+
+
 
 
 
