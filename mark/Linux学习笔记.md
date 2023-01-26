@@ -999,7 +999,7 @@ zip压缩命令在 window/linux都通用,可以压缩目录且保留源文件
   - --max-depth=n
   
 
-#### df查看磁盘空间使用情况
+#### 7-9-2 df查看磁盘空间使用情况
 
 df: didk free 空余磁盘
 
@@ -1012,6 +1012,19 @@ df: didk free 空余磁盘
 
 - 以人们较易阅读的GBytes,MBytes,KBytes等格式自行显示
   - -h
+
+#### 7-9-3 lsblk 查看设备挂载情况
+
+
+#### 7-9-4 mount/umount 挂载/卸载
+
+设置开机自动挂载
+
+        vi /etc/fstab
+
+添加红框中内容,保存退出
+
+![img_13.png](img_13.png)
 
 
 
