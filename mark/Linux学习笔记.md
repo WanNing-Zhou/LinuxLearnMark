@@ -1305,6 +1305,47 @@ YUM (全称为Yellow Dop Updater,Modified)是一个在Fedora和RedHat以及CentO
   - install
 - 更新rpm软件包
   - update
+- 检查是否有可用的更新rpm软件包
+  - check-update
+- 删除指定的rpm软件包
+  - remove
+- 显示软件包信息
+  - list
+- 清理yum过期的缓存
+  - clean
+- 显示yum软件包的所有依赖关系
+  - deplist
+
+#### 8-2-3 修改网络YUM源
+
+默认的系统YUM源,需要连接到国外apache网站,网速比较慢,可以修改关联的网络YUM源为国内镜像的网站,比如网易163,aliyu等
+
+1) 安装wget,wget用来凑够指定的URL下载文件
+
+`yum install wget`
+
+2) 在/etc/yum.repos.d/目录下,备份默认的repos文件
+
+        pwd
+        /etc/yum.repos.d
+        cp CentOS-Base.repo CentOS-Base
+        .repo.backup
+
+3) 下载网易163或者是aliyun的repos文件,任选其一
+
+        wget
+        
+        
+## 第九章 克隆虚拟机
+
+### 9-1 克隆
+
+1) 从现有虚拟机(关机状态)克隆出新虚拟机,右键选择管理=>克隆
+
+![img_15.png](img_15.png)
+
+    
+
 
 
 
