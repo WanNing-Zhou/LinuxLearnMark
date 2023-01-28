@@ -1251,12 +1251,33 @@ Apache-1.3.23-11.i386.rpm
 
 - 查询所安装的所有rpm软件包
 
-2)经验技巧
+2) 经验技巧
 
 由于软件包比较多,一般都会采取过滤 rpm -qa | grep rpm 软件包
 
-#### 8
+#### 8.1.3 RPM卸载命令(rpm -e)
 
+1) 基本语法
+
+   1) rpm -e RPM软件包
+   2) rmp -e -nodeps软件包
+
+#### 9-1-4 RPM安装命令 (rpm -ivh)
+
+1) 基本语法
+
+- rpm -ivh PRM 包全名
+
+2)选项说明
+
+- install,安装
+  - -i
+- --verbose,显示详细信息
+  - -v
+- --hash 进度条
+  - -h
+- 安装前不检查依赖
+  - --nodeps
     
 
 
