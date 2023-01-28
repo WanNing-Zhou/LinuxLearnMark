@@ -1344,6 +1344,11 @@ YUM (全称为Yellow Dop Updater,Modified)是一个在Fedora和RedHat以及CentO
 
 ![img_15.png](img_15.png)
 
+
+
+
+
+
     
 
 
