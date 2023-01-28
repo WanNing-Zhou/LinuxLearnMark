@@ -1278,7 +1278,35 @@ Apache-1.3.23-11.i386.rpm
   - -h
 - 安装前不检查依赖
   - --nodeps
-    
+  
+### 8-2 YUM 仓库配置
+
+#### 8-2-1 YUM概述
+
+YUM (全称为Yellow Dop Updater,Modified)是一个在Fedora和RedHat以及CentOS中的Shell前端软件包管理器,基于RPM包管理包
+并且安装,可以自动处理依赖关系,并且一次安装所有依赖的软件包,无需繁琐地一次次下载,安装
+
+![img_14.png](img_14.png)
+
+#### 8-2-2 YUM的常用命令
+
+1) 基本语法
+
+- yum [选项][参数]
+
+2) 选项说明
+
+- 对所有提问都回答"yes"
+  - -y
+
+3) 参数说明 
+
+- 安装rpm软件包
+  - install
+- 更新rpm软件包
+  - update
+
+
 
 
 
